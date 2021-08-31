@@ -1,0 +1,6 @@
+## Interface: 11200
+## Title: Hit and miss counter
+## Author: KrekoG
+## Notes: Logs your hits and misses. /ham
+## SavedVariables: HAM
+HAM.xml
