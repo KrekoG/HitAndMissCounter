@@ -13,9 +13,11 @@ function HAM_init()
         DEFAULT_CHAT_FRAME:AddMessage(key .. " - " .. value)
       end
     elseif msg =="sum" then
-      DEFAULT_CHAT_FRAME:AddMessage("Total: " .. HAM["hit"] + HAM["miss"])
+      local total = HAM["hit"] + HAM["miss"]
+      DEFAULT_CHAT_FRAME:AddMessage("Total: " .. total)
       DEFAULT_CHAT_FRAME:AddMessage("Hits: " .. HAM["hit"])
       DEFAULT_CHAT_FRAME:AddMessage("Misses: " .. HAM["miss"])
+      DEFAULT_CHAT_FRAME:AddMessage("Miss chance: " .. HAM["miss"] / total * 100 .. "%")
     elseif msg =="reset" then
       HAM_reset()
       DEFAULT_CHAT_FRAME:AddMessage("HAM is reset and is no longer recording")
